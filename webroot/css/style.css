@@ -3,15 +3,21 @@
  */
 
 @import url(figure.css);
+@import url(font-awesome.css);
 
 body {
   color: #333;
   font-family: arial, sans-serif;
   overflow-y: scroll;
+  background-image: url('../img/grass.png');
 }
 
 h1 {
   font-size: 2.2em;
+}
+
+h1, h2, h3, h4 {
+  padding: 0 10px; 
 }
 
 
@@ -21,9 +27,10 @@ h1 {
 #wrapper {
   margin: 0 auto;
   width: 980px; 
-  padding: 10px;
+  padding: 10px 10px 0 10px;
+  background-color: white;
+  border-radius: 15px;
 }
-
 
 /**
  * Layout for header
@@ -31,6 +38,10 @@ h1 {
 #header {
   position: relative;
   margin-bottom: 40px;
+}
+
+#status {
+  float:right;
 }
 
 .sitetitle {
@@ -54,6 +65,11 @@ h1 {
  */
 #main {
   min-height: 20em;
+  width: 960px;
+  float:left;
+  margin: 0 10px;
+  background-color: white;
+  border-radius: 15px;
 }
 
 
@@ -62,12 +78,18 @@ h1 {
  */
 #footer {
   margin-top: 40px;
-  border-top: 1px solid #ccc;
+  margin-bottom: 40px;
   padding-top: 22px;
+  padding-bottom: 22px;
+  float:left;
+  width: 980px;
+  background-color: white;
+  border-radius: 15px;
 }
 
 .sitefooter {
   color: #666;
+  padding-left: 10px;
 }
 
 
@@ -75,9 +97,7 @@ h1 {
  * For articles
  */
 .article1 {
-  width: 700px;
-  border-right: 1px solid #ccc;
-  padding-right: 1em;
+  padding: 0 1em;
 }
 
 .article1 h1,
@@ -94,4 +114,138 @@ h1 {
 
 .byline p {
   margin-top: 0;
+  width: 500px;
+  padding-bottom: 10px;
+}
+
+.photo {
+    height: 130px;
+    width: 80px;
+    float:left;
+    font-size: 12px;
+    font-style: italic;
+    margin: 1px;
+}
+ 
+.photo img {
+    height:100px;
+}
+
+table {
+  margin-bottom: 22px;
+}
+
+table caption {
+ text-align: left;
+ font-style: italic;
+}
+
+table th {
+  font-weight: bold;
+}
+
+table thead {
+  border-bottom: 2px solid #333;
+  background: red;
+  color: white;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+table thead tr th {
+  padding: 5px 10px 5px 5px;
+  text-align: center;
+}
+
+table tbody tr td {
+  padding: 5px 10px 5px 5px;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #eee
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #fff
+}
+
+.tags {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+}
+
+.avatar {
+  width: 20px;
+  height: 20px;
+}
+
+.answer {
+  padding: 4px 10px 0 4px;
+  color: #333;
+  border-top: 2px solid grey;
+  margin-bottom: 10px;
+  background-color: #eee;
+}
+
+.usertime {
+  font-weight: bold;
+  float: right;
+}
+
+table.widthgrey {
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: 20px;
+  background-color: #eee;
+}
+
+table.widthgrey tbody tr {
+  background-color: #eee
+}
+
+td.twentyfive {
+  width: 25%;
+}
+
+td.fifty {
+  width: 50%;
+}
+
+
+table.widthwhite {
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+table.widthwhite tbody tr {
+  background-color: #fff
+}
+
+.right {
+  text-align: right;
+  font-weight: bold;
+}
+
+.tags {
+  margin-right: 10px;
+}
+
+.tags a {
+  color:white;
+  text-decoration: none;
+}
+
+.tags a:link {
+  color:white;
+  text-decoration: none;
+}
+
+.tags a:visited {
+  color:white;
+  text-decoration: none;
 }

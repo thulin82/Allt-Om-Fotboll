@@ -6,10 +6,7 @@
   margin-bottom: 44px;
 }
 
-.navbar {
-  background-color: #eee;
-  border-radius: 4px;
-}
+.navbar {}
  
 .navbar ul {
   list-style: none; 
@@ -26,35 +23,34 @@
  
 .navbar a {
   display: block;
+  width: 100%;
   padding: 1em;
   text-decoration: none;
   color: inherit;
   white-space: nowrap; 
-
 }
 
 .navbar li:hover {
   color: #666; 
   border-color: #666;
-  background-color: #ddd;
 } 
  
 .navbar li.selected-parent, 
+.navbar li.is-parent, 
 .navbar li.selected {
-  color: #222; 
-  border-color: #222;
+  color: #f22; 
+  border-color: #f22;
 }
 
 .navbar ul ul {
-  padding: 2px 6px 2px 0; 
+  background-color: #fff; 
+  padding: 8px; 
   position: absolute; 
   left: -9999px; 
   z-index: 2;
-  background-color: #eee;
 }
  
 .navbar li li {
-  width: 100%;
   border-top: none;  
   border-left: 4px solid transparent;  
 }
@@ -69,6 +65,11 @@
 }
 
 .navbar li li.selected {
-  color: #222; 
-  border-color: #222;
+  color: #f22; 
+  border-color: #f22;
+}
+
+/* Just to sho off how class works */
+.navbar li .italic {
+  font-style: italic;
 }
