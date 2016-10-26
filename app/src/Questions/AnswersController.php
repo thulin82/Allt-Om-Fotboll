@@ -133,8 +133,8 @@ class AnswersController implements \Anax\DI\IInjectionAware
     /**
      * Get answers given by a specific user
      *
-     * @param  int    $userId  [description]
-     * @return object $answers [description]
+     * @param  int    $userId  The id of the user
+     * @return object $answers 
      */
     public function getAnswersBy($userId)
     {
@@ -150,11 +150,11 @@ class AnswersController implements \Anax\DI\IInjectionAware
 
 
     /**
-     * [upVoteAction description]
+     * Upvote an answer
      *
-     * @param  [type] $answerId   [description]
-     * @param  [type] $questionId [description]
-     * @return [type]             [description]
+     * @param  int $answerId  the id of the answer to upvote
+     * @param  int $questionId the id of the question the answer belongs to
+     * @return bool true
      */
     public function upVoteAction($answerId, $questionId)
     {
@@ -170,11 +170,11 @@ class AnswersController implements \Anax\DI\IInjectionAware
 
 
     /**
-     * [downVoteAction description]
+     * Downvote an answer
      *
-     * @param  [type] $answerId   [description]
-     * @param  [type] $questionId [description]
-     * @return [type]             [description]
+     * @param  int $answerId  the id of the answer to downvote
+     * @param  int $questionId the id of the question the answer belongs to
+     * @return bool true
      */
     public function downVoteAction($answerId, $questionId)
     {

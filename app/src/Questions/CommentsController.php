@@ -223,8 +223,8 @@ class CommentsController implements \Anax\DI\IInjectionAware
     /**
      * Get comments written by a specific user
      *
-     * @param  int    $userId   [description]
-     * @return object $comments [description]
+     * @param  int    $userId   the id of the user
+     * @return object $comments all comments given by $user
      */
     public function getCommentsBy($userId)
     {

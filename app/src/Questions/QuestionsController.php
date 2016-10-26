@@ -323,8 +323,8 @@ class QuestionsController implements \Anax\DI\IInjectionAware
     /**
      * Get questions asked by a specific user
      *
-     * @param  int    $userId    [description]
-     * @return object $questions [description]
+     * @param  int    $userId    the id of the user
+     * @return object $questions
      */
     public function getQuestionsBy($userId)
     {
@@ -340,9 +340,9 @@ class QuestionsController implements \Anax\DI\IInjectionAware
 
 
     /**
-     * [getLatestQuestionsAction description]
+     * Get the five latest questions 
      *
-     * @return [type] [description]
+     * @return object $questions
      */
     public function getLatestQuestionsAction()
     {
@@ -355,10 +355,10 @@ class QuestionsController implements \Anax\DI\IInjectionAware
 
 
     /**
-     * [upVoteAction description]
+     * Upvote a question
      *
-     * @param  [type] $questionId [description]
-     * @return [type]             [description]
+     * @param  int $questionId the id of the question to upvote
+     * @return bool true
      */
     public function upVoteAction($questionId)
     {
@@ -374,10 +374,10 @@ class QuestionsController implements \Anax\DI\IInjectionAware
 
 
     /**
-     * [downVoteAction description]
+     * Downvote a question
      *
-     * @param  [type] $questionId [description]
-     * @return [type]             [description]
+     * @param  int $questionId the id of the question to downvote
+     * @return bool true
      */
     public function downVoteAction($questionId)
     {

@@ -416,9 +416,9 @@ class UsersController implements \Anax\DI\IInjectionAware
 
 
     /**
-     * [mostActiveUsersAction description]
+     * Get the most active users
      *
-     * @return [type] [description]
+     * @return array with most active users
      */
     public function mostActiveUsersAction()
     {
@@ -426,7 +426,8 @@ class UsersController implements \Anax\DI\IInjectionAware
         foreach ($users as $u) {
             $answers     = $this->AnswersController->getAnswersBy($u->id);
             $questions   = $this->QuestionsController->getQuestionsBy($u->id);
-            $u->numPosts = count($answers) + count($questions);
+            $comments    = $this->CommentsController->getCommentsBy($u->id);
+            $u->numPosts = count($answers) + count($questions) + count($comments);
         }
         usort($users, array($this, "cmp"));
         $users = array_slice($users, 0, 5);
@@ -435,11 +436,11 @@ class UsersController implements \Anax\DI\IInjectionAware
 
 
     /**
-     * [cmp description]
+     * Sort Active users by most active
      *
-     * @param  [type] $a [description]
-     * @param  [type] $b [description]
-     * @return [type]    [description]
+     * @param  object $a User1
+     * @param  object $b User2
+     * @return sorted users
      */
     private function cmp($a, $b)
     {

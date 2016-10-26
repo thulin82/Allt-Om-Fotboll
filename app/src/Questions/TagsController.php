@@ -166,10 +166,10 @@ class TagsController implements \Anax\DI\IInjectionAware
 
 
     /**
-     * [getQuestionsTaggedBy description]
+     * Return all questions tagged by a specific tag
      *
-     * @param  [type] $tagId [description]
-     * @return [type]        [description]
+     * @param  int $tagId the id of the tag
+     * @return array containing questions
      */
     private function getQuestionsTaggedBy($tagId)
     {
@@ -186,11 +186,11 @@ class TagsController implements \Anax\DI\IInjectionAware
 
 
     /**
-     * [cmp description]
+     * Compare tag a with tag b by popularity
      *
-     * @param  [type] $a [description]
-     * @param  [type] $b [description]
-     * @return [type]    [description]
+     * @param  object $a tag a
+     * @param  object $b tag b
+     * @return sorted tag
      */
     private function cmp($a, $b)
     {
@@ -202,9 +202,9 @@ class TagsController implements \Anax\DI\IInjectionAware
 
 
     /**
-     * [popularTagsAction description]
+     * Sort tags by popularity
      *
-     * @return [type] [description]
+     * @return array with tags
      */
     public function popularTagsAction()
     {
@@ -220,10 +220,10 @@ class TagsController implements \Anax\DI\IInjectionAware
 
 
     /**
-     * [idAction description]
+     * View tag
      *
-     * @param  [type] $tagId [description]
-     * @return [type]        [description]
+     * @param  int $tagId the id of the tag
+     * @return void
      */
     public function idAction($tagId = null)
     {
@@ -255,7 +255,7 @@ class TagsController implements \Anax\DI\IInjectionAware
     /**
      * Edit an existing tag
      *
-     * @param  int $tagId [description]
+     * @param  int $tagId the id of the tag
      * @return void
      */
     public function editAction($tagId = null)
