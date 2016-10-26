@@ -1,6 +1,7 @@
 # Logs and databases 
 *.sqlite
 *.log
+webroot/db/db.sqlite
 
 
 # OS generated files 
