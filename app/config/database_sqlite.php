@@ -2,7 +2,7 @@
 
 return [
     // Its best to add an absolute path to the dsn
-    'dsn'     => "sqlite:db/.htsqlite.db",
+    'dsn'     => "sqlite:db/db.sqlite",
 
     // Display details on what happens
     //'verbose' => true,
