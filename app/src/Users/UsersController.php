@@ -117,12 +117,17 @@ class UsersController implements \Anax\DI\IInjectionAware
         $questions = $this->QuestionsController->getQuestionsBy($id);
         $this->views->add('questions/questions-list', [
             'list' => $questions,
-            'title' => "Questions asked by $id",
+            'title' => "Questions asked by $user->name",
         ]);
         $answers   = $this->AnswersController->getAnswersBy($id);
         $this->views->add('questions/answers-list', [
             'list' => $answers,
-            'title' => "Answers given by $id",
+            'title' => "Answers given by $user->name",
+        ]);
+        $comments   = $this->CommentsController->getCommentsBy($id);
+        $this->views->add('questions/comments-list', [
+            'list' => $comments,
+            'title' => "Comments by $user->name",
         ]);
     }
     
