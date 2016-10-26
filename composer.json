@@ -18,7 +18,8 @@
         "mos/ctextfilter": "1.2.2",
         "mos/cform": "2.x-dev",
         "phpmvc/comment": "dev-master",
-        "mos/cdatabase": "dev-master"
+        "mos/cdatabase": "dev-master",
+        "components/font-awesome": "4.6.3"
     },
     "autoload": {
         "psr-4": { "Anax\\": "src/" }
