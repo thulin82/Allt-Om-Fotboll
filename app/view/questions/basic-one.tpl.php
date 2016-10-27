@@ -17,7 +17,7 @@
             <div class="comment">
                 <?=$this->textFilter->doFilter($qc->content, 'shortcode, markdown')?>
                 <div class="right">
-                <?=htmlentities($qc->created)?>
+                by <?=htmlentities($qc->userAcronym)?> at <?=htmlentities($qc->created)?>
                 </div>    
             </div>
 
@@ -47,7 +47,7 @@
             <div class="comment">
                 <?=$this->textFilter->doFilter($ac->content, 'shortcode, markdown')?>
                 <div class="right">
-                    <?=htmlentities($ac->created)?>
+                    by <?=htmlentities($ac->userAcronym)?> at <?=htmlentities($ac->created)?>
                 </div>
             </div>
 

@@ -59,7 +59,7 @@ return [
         'lang' => 'sv',
 
         // Append this value to each <title>
-        'title_append' => ' | Anax a web template',
+        'title_append' => ' | Allt Om Fotboll',
 
         // Stylesheets
         'stylesheets' => ['css/style.css', 'css/navbar_me.css', 'css/form.css', 'css/comment.css'],

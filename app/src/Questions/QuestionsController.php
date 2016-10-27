@@ -146,6 +146,16 @@ class QuestionsController implements \Anax\DI\IInjectionAware
         $this->CommentsController->initialize();
         $question->comments = $this->CommentsController->getQuestionComments($id);
 
+        foreach ($question->comments as $com) {
+            $commenter = $this->dispatcher->forward([
+                'controller' => 'users',
+                'action'     => 'getUser',
+                'params'     => ['id' => $com->userid]
+            ]);
+
+            $com->userAcronym = $commenter->acronym;
+        }
+
         $answers = $this->dispatcher->forward([
                 'controller' => 'answers',
                 'action'     => 'getAnswers',
@@ -161,6 +171,16 @@ class QuestionsController implements \Anax\DI\IInjectionAware
 
             $a->userAcronym = $answerer->acronym;
             $a->comments    = $this->CommentsController->getAnswerComments($a->id);
+
+            foreach ($a->comments as $com) {
+                $commenter = $this->dispatcher->forward([
+                    'controller' => 'users',
+                    'action'     => 'getUser',
+                    'params'     => ['id' => $com->userid]
+                ]);
+
+                $com->userAcronym = $commenter->acronym;
+            }
         }
         
         $this->theme->setTitle($question->topic);
