@@ -206,31 +206,33 @@ class CRequestBasic
      */
     public function getCurrentUrl($queryString = true)
     {
-        $rs    = $this->getServer('REQUEST_SCHEME');
-        $https = $this->getServer('HTTPS') == 'on' ? true : false;
-        $sn    = $this->getServer('SERVER_NAME');
-        $port  = $this->getServer('SERVER_PORT');
+        $port  = $this->getServer("SERVER_PORT");
+        $https = $this->getServer("HTTPS") == "on" ? true : false;
 
-        $port  = ($port == '80')
-            ? ''
+        $scheme = $https
+            ? "https"
+            : $this->getServer("REQUEST_SCHEME", "http");
+
+        $server = $this->getServer("SERVER_NAME")
+            ?: $this->getServer("HTTP_HOST");
+
+        $port  = ($port === "80")
+            ? ""
             : (($port == 443 && $https)
-                ? ''
-                : ':' . $port);
+                ? ""
+                : ":" . $port);
 
-        if ($queryString) {
-            $ru = rtrim($this->getServer('REQUEST_URI'), '/');
-        } else {
-            $ru = rtrim(strtok($this->getServer('REQUEST_URI'), '?'), '/');
-        }
+        $uri = rawurldecode($this->getServer("REQUEST_URI"));
+        $uri = $queryString
+            ? rtrim($uri, "/")
+            : rtrim(strtok($uri, "?"), "/");
 
+        $url  = htmlspecialchars($scheme) . "://";
+        $url .= htmlspecialchars($server)
+            . $port . htmlspecialchars(rawurldecode($uri));
 
-        $url  = $rs ? $rs : 'http';
-        $url .= $https ? 's' : '';
-        $url .= '://';
-        $url .= $sn . $port . htmlspecialchars($ru);
-        
         return $url;
-    }
+	}
 
 
 
