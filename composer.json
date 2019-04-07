@@ -15,11 +15,11 @@
     ],
     "require": {
         "php": ">=5.4",
-        "mos/ctextfilter": "1.2.2",
+        "mos/ctextfilter": "1.2.22",
         "mos/cform": "2.x-dev",
         "phpmvc/comment": "dev-master",
         "mos/cdatabase": "dev-master",
-        "components/font-awesome": "4.6.3"
+        "components/font-awesome": "5.4.2"
     },
     "autoload": {
         "psr-4": { "Anax\\": "src/" }
