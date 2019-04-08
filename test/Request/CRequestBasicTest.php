@@ -6,7 +6,7 @@ namespace Anax\Request;
  * Storing information from the request and calculating related essentials.
  *
  */
-class CRequestBasicTest extends \PHPUnit_Framework_TestCase
+class CRequestBasicTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Properties

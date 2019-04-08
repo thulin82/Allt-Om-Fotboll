@@ -6,7 +6,7 @@ namespace Anax\Content;
  * Tests.
  *
  */
-class CTextFilterTest extends \PHPUnit_Framework_TestCase
+class CTextFilterTest extends \PHPUnit\Framework\TestCase
 {
 
     /**

@@ -6,7 +6,7 @@ namespace Anax\MVC;
  * A container for routes.
  *
  */
-class CDispatcherBasicTest extends \PHPUnit_Framework_TestCase
+class CDispatcherBasicTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Test

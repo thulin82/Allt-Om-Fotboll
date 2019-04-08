@@ -6,7 +6,7 @@ namespace Anax\Request;
  * Testing framework session class.
  *
  */
-class CSessionTest extends \PHPUnit_Framework_TestCase
+class CSessionTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Test

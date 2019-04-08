@@ -6,7 +6,7 @@ namespace Anax\Validate;
  * A helper to validate variables.
  *
  */
-class CValidateTest extends \PHPUnit_Framework_TestCase
+class CValidateTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Provider for test values

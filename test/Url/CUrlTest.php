@@ -6,7 +6,7 @@ namespace Anax\Url;
  * A helper to create urls.
  *
  */
-class CUrlTest extends \PHPUnit_Framework_TestCase
+class CUrlTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Provider for various siteUrls

@@ -6,7 +6,7 @@ namespace Anax\DI;
  * Testing the Dependency Injector service container.
  *
  */
-class CDITest extends \PHPUnit_Framework_TestCase
+class CDITest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Test
