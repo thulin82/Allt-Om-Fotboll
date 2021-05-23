@@ -19,7 +19,8 @@
         "mos/cform": "2.x-dev",
         "phpmvc/comment": "dev-master",
         "mos/cdatabase": "dev-master",
-        "components/font-awesome": "5.4.2"
+        "components/font-awesome": "5.4.2",
+        "phpunit/phpunit": "5.7.27"
     },
     "autoload": {
         "psr-4": { "Anax\\": "src/" }
