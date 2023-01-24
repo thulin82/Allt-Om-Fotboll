@@ -27,8 +27,13 @@ After that, you're ready to go!
 ### Build
 
 ```bash
-docker build -t clog .
+docker build -t alltomfotboll .
 ```
+
+### Run
+
+```bash
+docker run -d -p 8000:80 alltomfotboll
 
 ### Instructions
 
