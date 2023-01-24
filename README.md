@@ -34,6 +34,7 @@ docker build -t alltomfotboll .
 
 ```bash
 docker run -d -p 8000:80 alltomfotboll
+```
 
 ### Instructions
 
