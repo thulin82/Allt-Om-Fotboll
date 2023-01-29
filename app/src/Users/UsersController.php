@@ -57,7 +57,8 @@ class UsersController implements \Anax\DI\IInjectionAware
         $now = gmdate('Y-m-d H:i:s');
 
         $this->db->execute(['admin', 'admin@dbwebb.se', 'Administrator', password_hash('admin', PASSWORD_DEFAULT), $now, $now]);
-        $this->db->execute(['doe', 'doe@dbwebb.se', 'John/Jane Doe', password_hash('doe', PASSWORD_DEFAULT), $now, $now]);
+        $this->db->execute(['doe', 'doe@dbwebb.se', 'John Doe', password_hash('doe', PASSWORD_DEFAULT), $now, $now]);
+        $this->db->execute(['smith', 'smith@dbwebb.se', 'John Smith', password_hash('smith', PASSWORD_DEFAULT), $now, $now]);
     }
     
     
