@@ -8,4 +8,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php --install-dir=. --filename=composer
 RUN mv composer /usr/local/bin/
 COPY . /var/www/html/
+WORKDIR /var/www/html
+RUN composer install
+RUN chmod -R 777 /var/www/html/webroot/db
 EXPOSE 80
