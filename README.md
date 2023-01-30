@@ -39,4 +39,4 @@ docker run -d -p 8000:80 alltomfotboll
 ### Instructions
 
 The docker build command builds an image in all of its php 5.6 glory. This was the main version when this application originally was written.
-Set write access to both webroot/db folder and webroot/db/db.sqlite file for the databse stuff to work. And visit the routes above for seeding the data.
+Visit the routes above for seeding the data.
