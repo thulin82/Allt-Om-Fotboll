@@ -1,7 +1,5 @@
 # Allt om fotboll (project in course: phpmvc at BTH, Sweden)
 
-[![GitHub Actions](https://github.com/thulin82/Allt-Om-Fotboll/actions/workflows/github-actions.yml/badge.svg)](https://github.com/thulin82/Allt-Om-Fotboll/actions/workflows/github-actions.yml)
-
 This project is built using Anax-MVC as the foundation.
 Licenses and information about Anax-MVC is found [here](https://github.com/mosbth/Anax-MVC)
 

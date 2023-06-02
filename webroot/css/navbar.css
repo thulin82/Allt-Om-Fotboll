@@ -3,73 +3,74 @@
  * Changed to only style li-items instead of a.
  */
 #navbar {
-  margin-bottom: 44px;
+    margin-bottom: 44px;
 }
 
-.navbar {}
- 
+.navbar {
+}
+
 .navbar ul {
-  list-style: none; 
-  margin: 0; 
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
- 
+
 .navbar li {
-  display: inline-block;
-  border-top: 4px solid transparent; 
-  color: #333; 
-  position: relative; 
+    display: inline-block;
+    border-top: 4px solid transparent;
+    color: #333;
+    position: relative;
 }
- 
+
 .navbar a {
-  display: block;
-  width: 100%;
-  padding: 1em;
-  text-decoration: none;
-  color: inherit;
-  white-space: nowrap; 
+    display: block;
+    width: 100%;
+    padding: 1em;
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap;
 }
 
 .navbar li:hover {
-  color: #666; 
-  border-color: #666;
-} 
- 
-.navbar li.selected-parent, 
-.navbar li.is-parent, 
+    color: #666;
+    border-color: #666;
+}
+
+.navbar li.selected-parent,
+.navbar li.is-parent,
 .navbar li.selected {
-  color: #22f; 
-  border-color: #22f;
+    color: #f22;
+    border-color: #f22;
 }
 
 .navbar ul ul {
-  background-color: #fff; 
-  padding: 8px; 
-  position: absolute; 
-  left: -9999px; 
-  z-index: 2;
+    background-color: #fff;
+    padding: 8px;
+    position: absolute;
+    left: -9999px;
+    z-index: 2;
 }
- 
+
 .navbar li li {
-  border-top: none;  
-  border-left: 4px solid transparent;  
+    border-top: none;
+    border-left: 4px solid transparent;
 }
 
 .navbar li:hover ul {
-  left: 0;
+    left: 0;
 }
- 
+
 .navbar li li:hover {
-  color: #666; 
-  border-color: #666;
+    color: #666;
+    border-color: #666;
 }
 
 .navbar li li.selected {
-  color: #22f; 
-  border-color: #22f;
+    color: #f22;
+    border-color: #f22;
 }
 
 /* Just to sho off how class works */
 .navbar li .italic {
-  font-style: italic;
+    font-style: italic;
 }

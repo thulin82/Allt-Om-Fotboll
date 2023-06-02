@@ -11,4 +11,5 @@ COPY . /var/www/html/
 WORKDIR /var/www/html
 RUN composer install
 RUN chmod -R 777 /var/www/html/webroot/db
+RUN cp -r /var/www/html/vendor/components/font-awesome /var/www/html/webroot/css/font-awesome
 EXPOSE 80

@@ -62,7 +62,7 @@ return [
         'title_append' => ' | Allt Om Fotboll',
 
         // Stylesheets
-        'stylesheets' => ['css/style.css', 'css/navbar_me.css', 'css/form.css', 'css/comment.css'],
+        'stylesheets' => ['css/style.css', 'css/navbar.css', 'css/form.css', 'css/comment.css'],
 
         // Inline style
         'style' => null,

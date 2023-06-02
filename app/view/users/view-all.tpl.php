@@ -37,7 +37,7 @@ EOD;
                 <td>$name</td>
                 <td><i class='fa fa-user fa-fw' style=$style title='$title'></i></td>
                 <td>
-                    <a href='users/edit/$id' title='Editera'><i class='fa fa-pencil fa-fw' style='color:black'></i></a>
+                    <a href='users/edit/$id' title='Editera'><i class='fas fa-edit' style='color:black'></i></a>
                 </td>
             </tr>";
 
