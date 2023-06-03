@@ -1,5 +1,5 @@
-<h1><?=$this->textFilter->doFilter($title, 'shortcode, markdown')?></h1>
-<h2><?=$this->textFilter->doFilter($question->text, 'shortcode, markdown')?></h2>
+<h1><?=$this->textFilter->doFilter($title, 'shortcode')?></h1>
+<h2><?=$this->textFilter->doFilter($question->text, 'shortcode')?></h2>
 <div class='article1'>
     <table class='widthwhite'>
         <tr>
@@ -15,7 +15,7 @@
     <?php foreach ($question->comments as $qc) : ?>
 
             <div class="comment">
-                <?=$this->textFilter->doFilter($qc->content, 'shortcode, markdown')?>
+                <?=$this->textFilter->doFilter($qc->content, 'shortcode')?>
                 <div class="right">
                 by <?=htmlentities($qc->userAcronym)?> at <?=htmlentities($qc->created)?>
                 </div>    
@@ -29,7 +29,7 @@
 <h3><?=count($answers)?> answers:</h3>
 <?php foreach ($answers as $a) : ?>
     <div class='answer'>  
-        <?=$this->textFilter->doFilter($a->text, 'shortcode, markdown')?>
+        <?=$this->textFilter->doFilter($a->text, 'shortcode')?>
         <table class='widthgrey'>
             <tr>
                 <td class='twentyfive'></td>
@@ -45,7 +45,7 @@
     <?php foreach ($a->comments as $ac) : ?>
 
             <div class="comment">
-                <?=$this->textFilter->doFilter($ac->content, 'shortcode, markdown')?>
+                <?=$this->textFilter->doFilter($ac->content, 'shortcode')?>
                 <div class="right">
                     by <?=htmlentities($ac->userAcronym)?> at <?=htmlentities($ac->created)?>
                 </div>

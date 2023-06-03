@@ -136,11 +136,11 @@ $app->router->add('questions', function () use ($app) {
 
 $app->router->add('about', function () use ($app) {
     $app->theme->setTitle("About");
-    $content = $app->fileContent->get('about.md');
-    $content = $app->textFilter->doFilter($content, 'shortcode, markdown, clickable');
+    $content = $app->fileContent->get('about.html');
+    $content = $app->textFilter->doFilter($content, 'shortcode, clickable');
     
-    $byline  = $app->fileContent->get('byline.md');
-    $byline = $app->textFilter->doFilter($byline, 'shortcode, markdown');
+    $byline  = $app->fileContent->get('byline.html');
+    $byline = $app->textFilter->doFilter($byline, 'shortcode');
 
     $app->views->add('me/page', [
         'content' => $content,

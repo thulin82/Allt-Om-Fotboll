@@ -15,7 +15,6 @@ call_user_func(function () {
     $loader = new \Anax\Loader\CPsr4Autoloader();
     $loader->addNamespace('Anax', ANAX_INSTALL_PATH . 'src')
            ->addNamespace('', ANAX_APP_PATH . 'src')
-           ->addNamespace('Michelf', ANAX_INSTALL_PATH . '3pp/php-markdown/Michelf')
            ->register();
 });
 
