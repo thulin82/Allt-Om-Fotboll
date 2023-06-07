@@ -69,6 +69,8 @@ class TagsController implements \Anax\DI\IInjectionAware
         $this->db->execute(['1', '1']);
         $this->db->execute(['1', '2']);
         $this->db->execute(['2', '3']);
+
+        $this->response->redirect($this->url->create('comments/setup/'));
     }
 
 

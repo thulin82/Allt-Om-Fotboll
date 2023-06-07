@@ -78,6 +78,8 @@ class QuestionsController implements \Anax\DI\IInjectionAware
             $now
         ]);
 
+        $this->response->redirect($this->url->create('answers/setup/'));
+
     }
 
 
