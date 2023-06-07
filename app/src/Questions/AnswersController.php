@@ -89,6 +89,8 @@ class AnswersController implements \Anax\DI\IInjectionAware
             $now
         ]);
 
+        $this->response->redirect($this->url->create('tags/setup/'));
+
     }
 
 
