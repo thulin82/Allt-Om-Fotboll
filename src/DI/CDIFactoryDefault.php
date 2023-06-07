@@ -130,14 +130,14 @@ class CDIFactoryDefault extends CDI
         $this->setShared('theme', function () {
             $themeEngine = new \Anax\ThemeEngine\CThemeBasic();
             $themeEngine->setDI($this);
-            $themeEngine->configure(ANAX_APP_PATH . 'config/theme.php');
+            $themeEngine->configure(ANAX_APP_PATH . 'config/theme_project.php');
             return $themeEngine;
         });
 
         $this->setShared('navbar', function () {
             $navbar = new \Anax\Navigation\CNavbar();
             $navbar->setDI($this);
-            $navbar->configure(ANAX_APP_PATH . 'config/navbar.php');
+            $navbar->configure(ANAX_APP_PATH . 'config/navbar_project.php');
             return $navbar;
         });
 
