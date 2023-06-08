@@ -2,27 +2,27 @@
  * Style for forms
  */
 label {
-  font-size: smaller;
+    font-size: smaller;
 }
 
-input[type=text],
-input[type=password] {
-  font-size: 1.2em;
-  width: 500px;
+input[type="text"],
+input[type="password"] {
+    font-size: 1.2em;
+    width: 500px;
 }
 
-input[type=submit],
-input[type=reset] {
-  font-size: 1.2em;
+input[type="submit"],
+input[type="reset"] {
+    font-size: 1.2em;
 }
 
 textarea {
-  font-size: 1.2em;
-  width: 500px;
-  min-height: 200px;
+    font-size: 1.2em;
+    width: 500px;
+    min-height: 200px;
 }
 
 p.buttons {
-  padding-top: 22px;
-  padding-bottom: 22px;
-} 
+    padding-top: 22px;
+    padding-bottom: 22px;
+}

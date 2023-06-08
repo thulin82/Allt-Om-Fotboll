@@ -12,8 +12,8 @@ return [
      * name: name of the theme is mapped to a directory right below the path.
      */
     'settings' => [
-        'path' => ANAX_APP_PATH . 'theme/',
-        'name' => 'anax-project',
+        'path' => ANAX_APP_PATH,
+        'name' => 'theme',
     ],
 
     
@@ -71,10 +71,10 @@ return [
         'favicon' => 'favicon.ico',
 
         // Path to modernizr or null to disable
-        'modernizr' => 'js/modernizr.js',
+        'modernizr' => null,
 
         // Path to jquery or null to disable
-        'jquery' => '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js',
+        'jquery' => null,
 
         // Array with javscript-files to include
         'javascript_include' => [],

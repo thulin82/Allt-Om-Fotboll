@@ -60,6 +60,8 @@ class CommentsController implements \Anax\DI\IInjectionAware
         $this->db->execute([null, 2, 3, 'Answer comment #2', 0, $now]);
         $this->db->execute([null, 2, 3, 'Answer comment #3', 0, $now]);
         $this->db->execute([null, 6, 3, 'Answer comment #4', 0, $now]);
+
+        $this->response->redirect($this->url->create('/'));
     }
 
 
